@@ -1,0 +1,50 @@
+<script>
+
+// Alert Messages
+var wrongMsg = "You have guessed incorrectly, sorry.";
+var rightMsg = "Congratulations, you got it.";
+var outMsg;
+
+// Razor description variables
+var goodManuf = "Eclipse";
+var goodModel = "Red Ring";
+var goodFinish = "Chrome";
+
+// User input variables
+var userManuf;
+var userModel;
+var userFinish;
+
+// Ask the user to make a series of guesses leading to the right razor
+userManuf = prompt("Who manufactured the best safety razor ever?");
+
+if (userManuf != goodManuf)
+{
+	outMsg = wrongMsg;
+}
+else
+{
+	userModel = prompt("What is the razor's model name?");
+	if (userModel != goodModel)
+	{
+		outMsg = wrongMsg;
+	}
+	else
+	{
+		userFinish = prompt("What is the razor's finish?");
+		if (userFinish != goodFinish)
+		{
+			outMsg = wrongMsg
+		}
+		else
+		{
+			outMsg = rightMsg;
+		}
+	}
+}
+
+// Let the user know if they guessed right or wrong.
+alert(outMsg);
+
+
+</script>
