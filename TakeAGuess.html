@@ -1,14 +1,13 @@
 <script>
 
 // Alert Messages
-var wrongMsg = "You have guessed incorrectly, sorry.";
+var wrongMsg = "You have guessed incorrectly, sorry. Please try again.";
 var rightMsg = "Congratulations, you got it.";
-
 var manufHint = " Think moon occluding the sun.";
 var modelHint = " Another phrase for a crimson circle?";
 var finishHint = " What's on shiny bumpers?";
-var hint = "";
 var outMsg;
+var hint = "";
 
 // Razor description variables
 var goodManuf = "Eclipse";
@@ -22,31 +21,31 @@ var userFinish;
 
 // Ask the user to make a series of guesses leading to the right razor
 userManuf = prompt("Who manufactured the best safety razor ever?");
-
 if (userManuf != goodManuf)
 {
 	outMsg = wrongMsg;
 	hint = manufHint;
+	doAgain = true;
 }
 
 else
 {
 	userModel = prompt("What is the razor's model name?");
-
 	if (userModel != goodModel)
 	{
 		outMsg = wrongMsg;
 		hint = modelHint;
+		doAgain = true;
 	}
 
 	else
 	{
 		userFinish = prompt("What is the razor's finish?");
-
 		if (userFinish != goodFinish)
 		{
 			outMsg = wrongMsg;
 			hint = finishHint;
+			doAgain = true;
 		}
 
 		else
@@ -55,10 +54,9 @@ else
 		}
 
 	}
-
-}
+ }
 
 // Let the user know if they guessed right or wrong.
-alert(outMsg + hint);
+  alert(outMsg + hint);
 
 </script>
